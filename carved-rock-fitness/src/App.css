@@ -1,3 +1,134 @@
+/* Global styles can be placed in your main CSS file */
+body {
+  font-family: 'Your preferred font family', sans-serif;
+  /* Add other global styles as needed */
+}
+
+/* Specific styles for PageNotFound component */
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.p-16 {
+  padding: 4rem;
+}
+
+.dark-bg-gray-900 {
+  background-color: #1a202c; /* Replace with your preferred dark background color */
+}
+
+.dark-text-gray-100 {
+  color: #f7fafc; /* Replace with your preferred dark text color */
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.max-w-md {
+  max-width: 28rem; /* Adjust as needed */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.text-9xl {
+  font-size: 9rem;
+}
+
+.dark-text-gray-600 {
+  color: #cbd5e0; /* Replace with your preferred dark text color */
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.text-2xl {
+  font-size: 1.5rem; /* Adjust as needed */
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.md\\:text-3xl {
+  font-size: 1.875rem; /* Adjust as needed */
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.dark-text-gray-400 {
+  color: #a0aec0; /* Replace with your preferred dark text color */
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.dark-bg-violet-400 {
+  background-color: #805ad5; /* Replace with your preferred dark background color */
+}
+
+.dark-text-gray-900 {
+  color: #1a202c; /* Replace with your preferred dark text color */
+}
+
 html {
   height: 100%;
 }
