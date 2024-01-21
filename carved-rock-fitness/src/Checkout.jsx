@@ -7,7 +7,6 @@ const STATUS = {
   SUBMITTING: "SUBMITTING",
   COMPLETED: "COMPLETED",
 };
-
 // Declaring outside component to avoid recreation on each render
 const emptyAddress = {
   city: "",
