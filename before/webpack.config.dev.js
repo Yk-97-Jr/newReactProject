@@ -8,7 +8,7 @@ module.exports = {
   mode: "development",
   target: "web",
   devtool: "cheap-module-source-map",
-  entry: "./src/index.js",
+  entry: "./src/index",
   output: {
     path: path.resolve(__dirname, "build"),
     publicPath: "/",
@@ -23,6 +23,9 @@ module.exports = {
     https: false,
   },
   plugins: [
+    new webpack.DefinePlugin({
+      "process.env.API_URL": JSON.stringify("http://localhost:3001"),
+    }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
       favicon: "src/favicon.ico",
