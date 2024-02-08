@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { useQuery } from "react-query";
 import Eventitem from "./Eventitem";
-import axios from "axios";
+import { getEvents } from "./EventHelper";
 
 export default function Eventlist() {
-  const [events, setEvents] = useState([]);
+  const [page, setPage] = useState(1);
+  const { isLoading, data } = useQuery(["events", page], () => getEvents(page));
 
-  useEffect(() => {
-    axios.get("http://localhost:3333/events")
-      .then(response => {
-        setEvents(response.data);
-      });
-  }, [])
+  if (isLoading) {
+    return (
+      <div className="container mt-5">Loading ...</div>
+    );
+  }
 
   return (
     <div className="container" id="eventtable">
@@ -28,11 +29,31 @@ export default function Eventlist() {
           </thead>
           <tbody>
             {
-              events.map(event => (
+              data.data.rows.map(event => (
                 <Eventitem event={event} key={event.id} />
               ))
             }
           </tbody>
+          <tfoot>
+            <tr>
+              <th colSpan="3" className="text-center">
+                <button
+                  className="btn btn-primary btn-primary-themed btn-md font-upper"
+                  disabled={page === 1}
+                  onClick={() => setPage(Math.max(1, page - 1))}>
+                    Previous
+                  </button>
+              </th>
+              <th colSpan="3">
+                <button
+                  className="btn btn-primary btn-primary-themed btn-md font-upper"
+                  disabled={!data.data.hasMore}
+                  onClick={() => setPage(page + 1)}>
+                    Next
+                  </button>
+              </th>
+            </tr>
+          </tfoot>
         </table>
       </div>
     </div>

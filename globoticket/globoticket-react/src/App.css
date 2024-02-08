@@ -12,3 +12,12 @@
   background-color: #edf7f7;
   border-radius: 25px !important;
 }
+
+.fadeout {
+  animation: fadeOut 2s;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
